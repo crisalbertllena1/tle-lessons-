@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TLE-FCS Food Service Lessons</title>
+<meta name="description" content="Self-paced TLE-FCS Food Service lessons with auto-checked activities. Works on phones, tablets, and computers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --paper:#FAF7F1; --surface:#FFFFFF; --ink:#24211E; --muted:#635C55; --line:#E6DED2;
+  --brand:#2F5D50; --brand-soft:#E5F0EB; --gold:#D9A441; --gold-soft:#FFF3D9;
+  --done:#2E7D4A; --done-soft:#E2F3E7; --prog:#9A5B12; --prog-soft:#FFF0D9;
+  --shadow:0 1px 2px rgba(36,33,30,.06),0 6px 18px rgba(36,33,30,.06);
+  --f:"Lexend",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#181614; --surface:#23201D; --ink:#EEE9E2; --muted:#B4ACA2; --line:#38332E;
+  --brand:#8FCBAE; --brand-soft:#21302A; --gold:#F0C46A; --gold-soft:#3A3120;
+  --done:#8FD3A4; --done-soft:#1F3226; --prog:#F2B866; --prog-soft:#3A2D1A; --shadow:none}}
+:root[data-theme="dark"]{
+  --paper:#181614; --surface:#23201D; --ink:#EEE9E2; --muted:#B4ACA2; --line:#38332E;
+  --brand:#8FCBAE; --brand-soft:#21302A; --gold:#F0C46A; --gold-soft:#3A3120;
+  --done:#8FD3A4; --done-soft:#1F3226; --prog:#F2B866; --prog-soft:#3A2D1A; --shadow:none}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--f);font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+header{padding:28px 0 8px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--brand)}
+h1{font-size:clamp(26px,6vw,38px);line-height:1.15;margin:6px 0 8px;font-weight:700;letter-spacing:-.01em}
+.lead{color:var(--muted);margin:0;max-width:60ch}
+.howto{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:20px 0 6px;padding:0;list-style:none;counter-reset:s}
+.howto li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--muted);counter-increment:s;display:flex;gap:10px;align-items:flex-start}
+.howto li::before{content:counter(s);flex:none;width:24px;height:24px;border-radius:50%;background:var(--gold-soft);color:var(--ink);font-weight:700;font-size:13px;display:grid;place-items:center}
+.howto b{color:var(--ink);font-weight:600}
+section.lesson{margin:30px 0 8px}
+.lhead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px}
+.lnum{font-size:13px;font-weight:700;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);padding:3px 10px;border-radius:999px}
+.lmeta{font-size:13px;color:var(--muted)}
+h2{font-size:22px;line-height:1.25;margin:4px 0 2px;font-weight:600}
+.lblurb{color:var(--muted);margin:0 0 12px;font-size:15px}
+.days{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+a.day{display:flex;flex-direction:column;gap:6px;background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:14px 16px;color:inherit;text-decoration:none;box-shadow:var(--shadow);transition:transform .15s ease,border-color .15s ease}
+a.day:hover{transform:translateY(-2px);border-color:var(--accent)}
+a.day:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.dtop{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.dlabel{font-weight:700;font-size:14px;color:var(--accent)}
+.status{font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px}
+.status.done{background:var(--done-soft);color:var(--done)}
+.status.prog{background:var(--prog-soft);color:var(--prog)}
+.dtitle{font-weight:600;font-size:17px;line-height:1.3}
+.dblurb{font-size:14px;color:var(--muted)}
+.dfoot{display:flex;justify-content:space-between;align-items:center;margin-top:4px;font-size:13px;color:var(--muted)}
+.go{font-weight:600;color:var(--accent)}
+footer{margin:36px 0 28px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lesson{--accent:var(--accent-d)}}
+:root[data-theme="dark"] .lesson{--accent:var(--accent-d)}
+@media (prefers-reduced-motion: reduce){a.day{transition:none}a.day:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="eyebrow">TLE-FCS Food Service &bull; Term 2</span>
+    <h1>Self-Paced Lessons</h1>
+    <p class="lead">Pick a lesson day, study each screen, answer the activities, and earn your trophy. Works on phones, tablets, and computers.</p>
+    <ol class="howto">
+      <li><span><b>Open a day</b> and type your name and section.</span></li>
+      <li><span><b>Tap Show more</b> to see each part. Turn on <b>Read to me</b> if you like.</span></li>
+      <li><span><b>Answer every item.</b> You get one try, so think first.</span></li>
+      <li><span><b>Screenshot your trophy</b> and send it to your teacher.</span></li>
+    </ol>
+  </header>
+  <main id="list"></main>
+  <footer>Your progress is saved on this device and browser only. If you switch phones or clear your browser, start the day again.</footer>
+</div>
+<script>
+const LESSONS = [{"num": 6, "week": 6, "title": "Bar Tools and Equipment", "grade": "Grade 10", "blurb": "Recognize bar tools, explain what each one does, and choose and handle them safely.", "accent": "#306651", "d_accent": "#8FCBAE", "days": [{"lesson": 6, "day": 1, "file": "lesson-6-day-1.html", "key": "fcs-l6d1", "title": "Recognize Bar Tools and Their Functions", "blurb": "Name common bar tools, tell tools from equipment, and match tools that look alike to their real purpose", "items": 15, "minutes": 45}, {"lesson": 6, "day": 2, "file": "lesson-6-day-2.html", "key": "fcs-l6d2", "title": "Handle Equipment Safely and Build a Service Station", "blurb": "Storage, ice and electrical equipment, spotting risks, and choosing the right tool for each service need", "items": 16, "minutes": 45}]}, {"num": 7, "week": 7, "title": "Restaurant Service Sequence and Clearing", "grade": "Grade 9", "blurb": "Follow the service sequence from welcome to departure, then clear and re-set tables.", "accent": "#5B371F", "d_accent": "#E0B48A", "days": [{"lesson": 7, "day": 1, "file": "lesson-7-day-1.html", "key": "fcs-l7d1", "title": "Welcome to Order: The First Stages of Service", "blurb": "Table implements, service vocabulary, the 8-stage service sequence, and welcoming, seating, menu, and orders", "items": 15, "minutes": 45}, {"lesson": 7, "day": 2, "file": "lesson-7-day-2.html", "key": "fcs-l7d2", "title": "Serve to Re-set: Finishing the Service", "blurb": "Serving rules, bussing, billing, guest departure, clearing, re-setting, and safe tray handling", "items": 15, "minutes": 45}]}, {"num": 8, "week": 8, "title": "Service, Clearing, and Re-setting", "grade": "Grades 9 & 10", "blurb": "Serve, bill, clear, and re-set professionally: accurate, courteous, and safe.", "accent": "#287D7E", "d_accent": "#7CCFCF", "days": [{"lesson": 8, "day": 1, "file": "lesson-8-day-1.html", "key": "fcs-l8d1", "title": "Welcoming, Menu, and Taking Orders", "blurb": "The service sequence, welcoming and seating, presenting the menu, accurate orders, and ethical suggestive selling", "items": 15, "minutes": 45}, {"lesson": 8, "day": 2, "file": "lesson-8-day-2.html", "key": "fcs-l8d2", "title": "Serving, Billing, Clearing, and Re-setting", "blurb": "Safe serving, bussing, billing checks, guest departure, clearing, and re-setting for the next guests", "items": 15, "minutes": 45}]}];
+function read(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+document.getElementById('list').innerHTML = LESSONS.map(l => `
+  <section class="lesson" style="--accent:${l.accent};--accent-d:${l.d_accent}" aria-labelledby="l${l.num}">
+    <div class="lhead"><span class="lnum">Lesson ${l.num}</span><span class="lmeta">Week ${l.week} &bull; ${esc(l.grade)}</span></div>
+    <h2 id="l${l.num}">${esc(l.title)}</h2>
+    <p class="lblurb">${esc(l.blurb)}</p>
+    <div class="days">${l.days.map(d => {
+      const s = read(d.key + '-progress-day' + d.day);
+      const st = s ? (s.done ? '<span class="status done">Done</span>' : '<span class="status prog">In progress</span>') : '';
+      return `<a class="day" href="${d.file}">
+        <div class="dtop"><span class="dlabel">Day ${d.day}</span>${st}</div>
+        <span class="dtitle">${esc(d.title)}</span>
+        <span class="dblurb">${esc(d.blurb)}</span>
+        <div class="dfoot"><span>${d.minutes} min &bull; 3 activities &bull; ${d.items} items</span><span class="go">${s && !s.done ? 'Continue' : (s ? 'Open again' : 'Start')} &rsaquo;</span></div>
+      </a>`;}).join('')}</div>
+  </section>`).join('');
+</script>
+</body>
+</html>
